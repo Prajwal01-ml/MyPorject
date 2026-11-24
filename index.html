@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISMT College HSS | Thapathali, Kathmandu - UK Qualifications & +2 Education</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Academic & UI Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        ismt: {
+                            navy: '#0B1F3A',
+                            blue: '#13315C',
+                            royal: '#1D4ED8',
+                            crimson: '#BE123C',
+                            gold: '#D97706',
+                            amber: '#F59E0B',
+                            light: '#F8FAFC'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-ismt-navy selection:text-white">
+
+    <!-- ==================== 1. TOP BAR & STICKY NAVIGATION ==================== -->
+    <!-- Top Information Bar -->
+    <div class="bg-ismt-navy text-slate-200 text-xs sm:text-sm border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-6">
+                <a href="tel:+97714112122" class="hover:text-amber-400 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-amber-400"></i>
+                    <span>+977-1-4112122 / 4112159</span>
+                </a>
+                <a href="mailto:info@ismt.edu.np" class="hover:text-amber-400 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-envelope text-amber-400"></i>
+                    <span>info@ismt.edu.np</span>
+                </a>
+                <span class="hidden md:flex items-center gap-1.5 text-slate-300">
+                    <i class="fa-solid fa-location-dot text-rose-500"></i>
+                    <span>Thapathali, Kathmandu, Nepal</span>
+                </span>
+            </div>
+            <div class="flex items-center gap-4">
+                <button onclick="openPortalToast()" class="hover:text-amber-400 transition flex items-center gap-1.5 font-medium">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    <span>Student Portal</span>
+                </button>
+                <span class="text-white/20">|</span>
+                <button onclick="openApplyModal('General Inquiry')" class="text-amber-400 hover:text-amber-300 font-semibold transition flex items-center gap-1">
+                    <span>2026 Intake Open</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Main Header -->
+    <header id="navbar" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo (Custom SVG + Typography) -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-ismt-navy via-ismt-blue to-ismt-crimson p-0.5 shadow-md group-hover:scale-105 transition-transform">
+                        <div class="w-full h-full bg-ismt-navy rounded-[10px] flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32 8L6 20L32 32L58 20L32 8Z" fill="#F59E0B"/>
+                                <path d="M14 25V41C14 46.5 22 52 32 52C42 52 50 46.5 50 41V25L32 33.5L14 25Z" fill="white" fill-opacity="0.95"/>
+                                <path d="M54 22V38" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="54" cy="40" r="2.5" fill="#BE123C"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-ismt-navy">ISMT</span>
+                            <span class="text-xs font-bold uppercase px-2 py-0.5 rounded-md bg-rose-100 text-ismt-crimson tracking-wider">College HSS</span>
+                        </div>
+                        <p class="text-[11px] sm:text-xs text-slate-500 font-medium tracking-wide">Thapathali, Kathmandu • Est. 2011</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-slate-700">
+                    <a href="#home" class="hover:text-ismt-crimson transition py-2">Home</a>
+                    <a href="#about" class="hover:text-ismt-crimson transition py-2">About ISMT</a>
+                    <a href="#programs" class="hover:text-ismt-crimson transition py-2">Programs</a>
+                    <a href="#facilities" class="hover:text-ismt-crimson transition py-2">Facilities & Campus</a>
+                    <a href="#gallery" class="hover:text-ismt-crimson transition py-2">Student Life</a>
+                    <a href="#contact" class="hover:text-ismt-crimson transition py-2">Contact</a>
+                </nav>
+
+                <!-- CTA & Mobile Hamburger -->
+                <div class="flex items-center gap-3">
+                    <button onclick="openApplyModal('General Admission')" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-ismt-crimson to-rose-700 hover:from-rose-700 hover:to-ismt-crimson text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow-md shadow-rose-600/20 hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                        <span>Apply Now</span>
+                        <i class="fa-solid fa-paper-plane text-xs"></i>
+                    </button>
+                    <button id="mobile-menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-4 pt-3 pb-6 space-y-2 shadow-xl">
+            <a href="#home" class="mobile-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50 hover:text-ismt-crimson">Home</a>
+            <a href="#about" class="mobile-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50 hover:text-ismt-crimson">About ISMT</a>
+            <a href="#programs" class="mobile-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50 hover:text-ismt-crimson">Academic Programs</a>
+            <a href="#facilities" class="mobile-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50 hover:text-ismt-crimson">Facilities & Labs</a>
+            <a href="#gallery" class="mobile-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50 hover:text-ismt-crimson">Campus Gallery</a>
+            <a href="#contact" class="mobile-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-slate-50 hover:text-ismt-crimson">Contact & Location</a>
+            <div class="pt-3 px-2">
+                <button onclick="openApplyModal('General Admission')" class="w-full bg-ismt-crimson text-white font-semibold py-3 rounded-xl shadow-md flex items-center justify-center gap-2">
+                    <span>Apply Online for 2026</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== 2. HERO SECTION ==================== -->
+    <section id="home" class="relative overflow-hidden bg-ismt-navy text-white">
+        <!-- Decorative Background Shapes & Academic Pattern -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-amber-500 blur-3xl"></div>
+            <div class="absolute bottom-0 -left-24 w-96 h-96 rounded-full bg-rose-600 blur-3xl"></div>
+            <div class="absolute inset-0" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 32px 32px; opacity: 0.15;"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Hero Text Column -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-sm text-amber-300 text-xs sm:text-sm font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+                        <span>Admissions Open: +2 (NEB) & UK Bachelor's Degrees</span>
+                    </div>
+
+                    <h1 class="font-heading font-extrabold text-3xl sm:text-5xl lg:text-[54px] leading-[1.15] tracking-tight">
+                        Empowering Future Leaders with <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-rose-400">UK Qualifications</span> in Nepal
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Located in the educational heart of <strong class="text-white">Thapathali, Kathmandu</strong>, ISMT College HSS bridges national excellence in <strong class="text-white">+2 Science & Management</strong> with globally recognized UK degrees in partnership with the <strong class="text-amber-300">University of Sunderland</strong> & <strong class="text-amber-300">Pearson BTEC</strong>.
+                    </p>
+
+                    <!-- Dual CTAs -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#programs" class="w-full sm:w-auto px-7 py-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-ismt-navy font-bold text-sm sm:text-base shadow-lg shadow-amber-500/25 transition-all flex items-center justify-center gap-2">
+                            <span>Explore Programs</span>
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </a>
+                        <button onclick="openApplyModal('2026 Intake Counselling')" class="w-full sm:w-auto px-7 py-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/25 text-white font-semibold text-sm sm:text-base backdrop-blur-sm transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-calendar-check text-amber-400"></i>
+                            <span>Book Free Counselling</span>
+                        </button>
+                    </div>
+
+                    <!-- Academic Affiliation Pills -->
+                    <div class="pt-6 border-t border-white/10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs sm:text-sm text-slate-300">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-certificate text-amber-400 text-base"></i>
+                            <span>University of Sunderland, UK</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-award text-rose-400 text-base"></i>
+                            <span>Pearson BTEC Approved</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-landmark text-emerald-400 text-base"></i>
+                            <span>NEB Affiliated (+2)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual Showcase Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-3xl overflow-hidden border-4 border-white/15 shadow-2xl bg-ismt-blue">
+                        <img 
+                            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80" 
+                            alt="ISMT College Students Graduating" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x650/13315C/FFFFFF?text=ISMT+College+HSS+Thapathali';"
+                            class="w-full h-[360px] sm:h-[440px] object-cover object-center"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-ismt-navy via-ismt-navy/30 to-transparent"></div>
+                        
+                        <!-- Overlay Campus Info -->
+                        <div class="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur-md text-slate-900 p-4 sm:p-5 rounded-2xl shadow-xl">
+                            <div class="flex items-center justify-between gap-4">
+                                <div>
+                                    <span class="text-xs font-bold uppercase tracking-wider text-ismt-crimson">International Standard</span>
+                                    <h3 class="font-heading font-bold text-base sm:text-lg text-ismt-navy">100% UK Degree Equivalency (TU)</h3>
+                                    <p class="text-xs text-slate-600 mt-0.5">Credit transfer options to UK, Australia, USA & Canada</p>
+                                </div>
+                                <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0 font-extrabold text-lg">
+                                    UK
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 3. ANIMATED STATS COUNTER ==================== -->
+    <section id="stats-section" class="relative -mt-8 z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl shadow-xl border border-slate-100 p-6 sm:p-10 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            <div class="text-center p-2">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-2xl bg-blue-50 text-ismt-blue flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+                <div class="font-heading font-extrabold text-3xl sm:text-4xl text-ismt-navy">
+                    <span class="counter" data-target="15">0</span>+
+                </div>
+                <p class="text-xs sm:text-sm font-medium text-slate-500 mt-1">Years of Academic Excellence</p>
+            </div>
+
+            <div class="text-center p-2">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-2xl bg-rose-50 text-ismt-crimson flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <div class="font-heading font-extrabold text-3xl sm:text-4xl text-ismt-navy">
+                    <span class="counter" data-target="6500">0</span>+
+                </div>
+                <p class="text-xs sm:text-sm font-medium text-slate-500 mt-1">Graduates & Global Alumni</p>
+            </div>
+
+            <div class="text-center p-2">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="font-heading font-extrabold text-3xl sm:text-4xl text-ismt-navy">
+                    <span class="counter" data-target="35">0</span>+
+                </div>
+                <p class="text-xs sm:text-sm font-medium text-slate-500 mt-1">International Partner Universities</p>
+            </div>
+
+            <div class="text-center p-2">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <div class="font-heading font-extrabold text-3xl sm:text-4xl text-ismt-navy">
+                    <span class="counter" data-target="94">0</span>%
+                </div>
+                <p class="text-xs sm:text-sm font-medium text-slate-500 mt-1">Internship & Career Placement</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 4. ABOUT ISMT COLLEGE HSS ==================== -->
+    <section id="about" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 text-ismt-blue text-xs font-bold uppercase tracking-wider">
+                    About ISMT College HSS
+                </div>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-ismt-navy leading-tight">
+                    Redefining Higher Education at <span class="text-ismt-crimson">Thapathali, Kathmandu</span>
+                </h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Established in 2011, <strong>ISMT College HSS</strong> is on a mission to contribute to Nepal's higher education landscape by providing internationally recognized and industry-relevant qualifications right here in Kathmandu.
+                </p>
+                <p class="text-slate-600 leading-relaxed">
+                    Whether you are stepping into <strong>Grade XI & XII (+2 Science or Management)</strong> under the National Examinations Board (NEB) or pursuing a prestigious <strong>UK Bachelor's Degree</strong> in IT, Business, Hospitality, or Cyber Security, ISMT nurtures practical skillsets, critical thinking, and global employability.
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                    <div class="flex items-start gap-3 p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-ismt-navy text-amber-400 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">UK Academic Standards</h4>
+                            <p class="text-xs text-slate-500 mt-1">Direct curriculum & quality assurance from UK awarding bodies.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-ismt-crimson text-white flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">100% Practical Focus</h4>
+                            <p class="text-xs text-slate-500 mt-1">Project-based assessments, workshops & corporate internships.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" 
+                         alt="Collaborative Learning at ISMT" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/500x400/0B1F3A/FFFFFF?text=Collaborative+Learning';"
+                         class="w-full h-52 sm:h-64 object-cover rounded-3xl shadow-md">
+                    <div class="bg-ismt-navy text-white p-6 rounded-3xl shadow-lg">
+                        <i class="fa-solid fa-quote-left text-amber-400 text-2xl mb-2"></i>
+                        <p class="text-sm text-slate-200 italic">"Affordable international education in Kathmandu without compromising on global academic quality."</p>
+                        <p class="text-xs font-bold text-amber-400 mt-3 uppercase tracking-wider">— Academic Leadership, ISMT</p>
+                    </div>
+                </div>
+                <div class="space-y-4 pt-6">
+                    <div class="bg-gradient-to-br from-ismt-crimson to-rose-700 text-white p-6 rounded-3xl shadow-lg">
+                        <h3 class="font-heading font-extrabold text-2xl">Prime Location</h3>
+                        <p class="text-xs text-rose-100 mt-1 leading-relaxed">Easily accessible campus at Thapathali, Kathmandu with modern smart classrooms & library.</p>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" 
+                         alt="ISMT Computer Lab" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/500x400/13315C/FFFFFF?text=Modern+IT+Labs';"
+                         class="w-full h-52 sm:h-64 object-cover rounded-3xl shadow-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 5. ACADEMIC PROGRAMS (FILTERABLE) ==================== -->
+    <section id="programs" class="py-16 sm:py-24 bg-slate-100/80 border-y border-slate-200/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="inline-block px-3.5 py-1 rounded-full bg-rose-100 text-ismt-crimson text-xs font-bold uppercase tracking-wider">
+                    Academic Pathways
+                </span>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-ismt-navy">
+                    Explore Our Accredited Programs
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    Choose between Nepal's premier +2 Higher Secondary streams (NEB) or internationally acclaimed British Bachelor's Honours degrees.
+                </p>
+            </div>
+
+            <!-- Interactive Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mt-8 mb-12" id="program-filters">
+                <button data-filter="all" class="filter-btn active px-5 py-2.5 rounded-xl text-sm font-semibold bg-ismt-navy text-white shadow-md transition-all">
+                    All Programs (6)
+                </button>
+                <button data-filter="plus2" class="filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-white text-slate-700 hover:bg-slate-200/70 border border-slate-200 transition-all">
+                    +2 Higher Secondary (NEB)
+                </button>
+                <button data-filter="bachelor" class="filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-white text-slate-700 hover:bg-slate-200/70 border border-slate-200 transition-all">
+                    UK Bachelor's (Hons) & BTEC
+                </button>
+            </div>
+
+            <!-- Programs Grid (Populated via JS for clean interactivity) -->
+            <div id="programs-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Cards injected dynamically by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 6. FACILITIES & WHY CHOOSE ISMT ==================== -->
+    <section id="facilities" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div class="space-y-3 max-w-2xl">
+                <span class="inline-block px-3.5 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-wider">
+                    World-Class Infrastructure
+                </span>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-ismt-navy">
+                    Why Students Choose ISMT Thapathali
+                </h2>
+            </div>
+            <p class="text-slate-600 text-sm max-w-md">
+                Designed for hands-on innovation, our Thapathali campus equips students with industry-standard labs, digital libraries, and career mentorship.
+            </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Feature 1 -->
+            <div class="group bg-white p-7 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-blue-50 text-ismt-blue group-hover:bg-ismt-navy group-hover:text-amber-400 flex items-center justify-center text-2xl mb-5 transition-colors">
+                    <i class="fa-solid fa-server"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">High-Tech IT & Cyber Labs</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Dedicated networking, ethical hacking, and software development labs with high-speed fiber internet and enterprise tools.
+                </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="group bg-white p-7 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-rose-50 text-ismt-crimson group-hover:bg-ismt-crimson group-hover:text-white flex items-center justify-center text-2xl mb-5 transition-colors">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">Hospitality & Culinary Suites</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Commercial-grade training kitchens, mock bar, front-office simulation, and housekeeping labs for BHM & +2 Hotel Management.
+                </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="group bg-white p-7 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 group-hover:bg-amber-500 group-hover:text-ismt-navy flex items-center justify-center text-2xl mb-5 transition-colors">
+                    <i class="fa-solid fa-flask"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">NEB Science Laboratories</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Modern Physics, Chemistry, and Biology labs tailored for +2 Science students preparing for Medical & Engineering entrances.
+                </p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="group bg-white p-7 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white flex items-center justify-center text-2xl mb-5 transition-colors">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">Career & Placement Cell</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Strong partnerships with leading IT firms, 5-star hotels, banks, and corporate houses in Nepal and abroad for guaranteed internships.
+                </p>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="group bg-white p-7 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 group-hover:bg-purple-600 group-hover:text-white flex items-center justify-center text-2xl mb-5 transition-colors">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">E-Library & Resource Hub</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Quiet study zones with access to University of Sunderland digital journals, Pearson e-books, and thousands of reference volumes.
+                </p>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="group bg-white p-7 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-cyan-50 text-cyan-600 group-hover:bg-cyan-600 group-hover:text-white flex items-center justify-center text-2xl mb-5 transition-colors">
+                    <i class="fa-solid fa-people-group"></i>
+                </div>
+                <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">Vibrant Student Clubs</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    IT Club, Entrepreneurship Hub, Sports Council, and Cultural Committees organizing hackathons, fests, and leadership bootcamps.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 7. TESTIMONIALS & CAMPUS GALLERY ==================== -->
+    <section id="gallery" class="py-16 sm:py-24 bg-ismt-navy text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Student Voices -->
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="inline-block px-3.5 py-1 rounded-full bg-white/10 text-amber-300 text-xs font-bold uppercase tracking-wider mb-3">
+                    Student Stories
+                </span>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl">
+                    Hear From Our Scholars & Alumni
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-20">
+                <div class="bg-white/5 border border-white/10 backdrop-blur-sm p-7 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-sm mb-4 gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-200 text-sm leading-relaxed italic">
+                            "Studying BSc (Hons) Computer Systems Engineering at ISMT Thapathali gave me real-world coding confidence. The practical assignments prepared me directly for my software engineering role."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-6 pt-4 border-t border-white/10">
+                        <div class="w-11 h-11 rounded-full bg-amber-500 text-ismt-navy font-bold flex items-center justify-center">AS</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white">Aarav Shrestha</h4>
+                            <p class="text-xs text-amber-300">BSc (Hons) IT Graduate • Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 backdrop-blur-sm p-7 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-sm mb-4 gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-200 text-sm leading-relaxed italic">
+                            "ISMT College HSS provided the best foundation during my +2 Management. The teachers are approachable, disciplined, and truly care about every student's board exam performance."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-6 pt-4 border-t border-white/10">
+                        <div class="w-11 h-11 rounded-full bg-rose-500 text-white font-bold flex items-center justify-center">PK</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white">Prashansa Karki</h4>
+                            <p class="text-xs text-rose-300">+2 Management (NEB) Alumna</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 backdrop-blur-sm p-7 rounded-3xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-sm mb-4 gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-200 text-sm leading-relaxed italic">
+                            "The BHM practical labs and industry exposure at ISMT helped me secure an international hospitality internship right after my final semester. Proud to be an ISMTian!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-6 pt-4 border-t border-white/10">
+                        <div class="w-11 h-11 rounded-full bg-emerald-500 text-ismt-navy font-bold flex items-center justify-center">RG</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white">Rohan Gurung</h4>
+                            <p class="text-xs text-emerald-300">BSc (Hons) Hospitality Management</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Campus Gallery with Lightbox -->
+            <div class="space-y-6">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div>
+                        <h3 class="font-heading font-bold text-2xl sm:text-3xl">Life at ISMT Thapathali</h3>
+                        <p class="text-slate-300 text-sm mt-1">Click any photo to inspect campus events, labs, and graduation moments.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <button onclick="openLightbox('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80', 'Annual Convocation Ceremony - UK Degree Graduates')" class="group relative rounded-2xl overflow-hidden aspect-[4/3] focus:outline-none">
+                        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=600&q=80" alt="Convocation" onerror="this.onerror=null;this.src='https://placehold.co/600x450/13315C/FFFFFF?text=Convocation';" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-xs font-semibold text-white">Annual Convocation</span>
+                        </div>
+                    </button>
+
+                    <button onclick="openLightbox('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80', 'IT Hackathon & Coding Bootcamp at Thapathali Campus')" class="group relative rounded-2xl overflow-hidden aspect-[4/3] focus:outline-none">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="IT Workshop" onerror="this.onerror=null;this.src='https://placehold.co/600x450/0B1F3A/FFFFFF?text=IT+Hackathon';" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-xs font-semibold text-white">IT Hackathon & Workshops</span>
+                        </div>
+                    </button>
+
+                    <button onclick="openLightbox('https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=80', 'Culinary & Hospitality Practical Lab Session')" class="group relative rounded-2xl overflow-hidden aspect-[4/3] focus:outline-none">
+                        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=80" alt="BHM Lab" onerror="this.onerror=null;this.src='https://placehold.co/600x450/BE123C/FFFFFF?text=Hospitality+Lab';" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-xs font-semibold text-white">BHM Culinary Practical</span>
+                        </div>
+                    </button>
+
+                    <button onclick="openLightbox('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80', 'Interactive Seminar & Guest Lecture Series')" class="group relative rounded-2xl overflow-hidden aspect-[4/3] focus:outline-none">
+                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80" alt="Seminar Hall" onerror="this.onerror=null;this.src='https://placehold.co/600x450/D97706/FFFFFF?text=Guest+Lecture';" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-xs font-semibold text-white">Industry Guest Seminars</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 8. ADMISSION INQUIRY & LOCATION ==================== -->
+    <section id="contact" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-10 items-start">
+            <!-- Contact Info & Map Card -->
+            <div class="lg:col-span-5 space-y-6">
+                <div>
+                    <span class="inline-block px-3.5 py-1 rounded-full bg-blue-50 text-ismt-blue text-xs font-bold uppercase tracking-wider mb-3">
+                        Visit Our Campus
+                    </span>
+                    <h2 class="font-heading font-extrabold text-3xl text-ismt-navy">
+                        Get in Touch With Us
+                    </h2>
+                    <p class="text-slate-600 text-sm mt-2">
+                        Drop by our Thapathali campus for a personalized academic counseling session and campus tour.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
+                        <div class="w-11 h-11 rounded-xl bg-rose-50 text-ismt-crimson flex items-center justify-center shrink-0 text-lg">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Campus Address</h4>
+                            <p class="text-xs sm:text-sm text-slate-600 mt-0.5">ISMT College HSS, Thapathali, Kathmandu 44600, Nepal (Near Norvic Hospital / Thapathali Bridge)</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
+                        <div class="w-11 h-11 rounded-xl bg-blue-50 text-ismt-blue flex items-center justify-center shrink-0 text-lg">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Admissions Hotline</h4>
+                            <p class="text-xs sm:text-sm text-slate-600 mt-0.5">+977-1-4112122, +977-1-4112159, +977-9801060601</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
+                        <div class="w-11 h-11 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 text-lg">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Office & Counseling Hours</h4>
+                            <p class="text-xs sm:text-sm text-slate-600 mt-0.5">Sunday – Friday: 7:00 AM – 5:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Styled Interactive Map Card -->
+                <div class="rounded-3xl overflow-hidden border border-slate-200 shadow-md bg-slate-100">
+                    <iframe 
+                        title="ISMT College Thapathali Map"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=85.3120%2C27.6880%2C85.3240%2C27.6960&amp;layer=mapnik&amp;marker=27.6921%2C85.3182" 
+                        class="w-full h-56 border-0"
+                        loading="lazy">
+                    </iframe>
+                    <div class="bg-white px-4 py-3 flex items-center justify-between text-xs">
+                        <span class="font-semibold text-slate-700"><i class="fa-solid fa-map-pin text-ismt-crimson mr-1"></i> Thapathali, Kathmandu</span>
+                        <a href="https://maps.google.com/?q=ISMT+College+Kathmandu" target="_blank" rel="noopener noreferrer" class="text-ismt-blue font-bold hover:underline">
+                            Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Online Admission Inquiry Form -->
+            <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-100">
+                <div class="mb-6">
+                    <h3 class="font-heading font-extrabold text-2xl text-ismt-navy">Online Admission & Scholarship Inquiry</h3>
+                    <p class="text-sm text-slate-500 mt-1">Fill out the form below. Our admissions counselor at Thapathali will reach out within 24 hours.</p>
+                </div>
+
+                <form id="inquiry-form" class="space-y-5">
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Full Name *</label>
+                            <input type="text" id="inq-name" required placeholder="e.g. Suman Adhikari" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-ismt-blue focus:ring-2 focus:ring-ismt-blue/20 outline-none text-sm transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Mobile Number *</label>
+                            <input type="tel" id="inq-phone" required placeholder="e.g. 9841XXXXXX" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-ismt-blue focus:ring-2 focus:ring-ismt-blue/20 outline-none text-sm transition">
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Email Address *</label>
+                            <input type="email" id="inq-email" required placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-ismt-blue focus:ring-2 focus:ring-ismt-blue/20 outline-none text-sm transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Last Qualification *</label>
+                            <select id="inq-qual" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-ismt-blue focus:ring-2 focus:ring-ismt-blue/20 outline-none text-sm bg-white transition">
+                                <option value="">Select Qualification</option>
+                                <option value="SEE Appeared / Passed">SEE Appeared / Passed (For +2)</option>
+                                <option value="+2 / A-Levels Completed">+2 / A-Levels Completed (For Bachelor's)</option>
+                                <option value="Diploma / Credit Transfer">Diploma / Credit Transfer</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Program of Interest *</label>
+                        <select id="inq-program" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-ismt-blue focus:ring-2 focus:ring-ismt-blue/20 outline-none text-sm bg-white transition">
+                            <option value="">Choose a Program</option>
+                            <option value="+2 Science (NEB)">+2 Science (NEB)</option>
+                            <option value="+2 Management (NEB - CS / HM / Business)">+2 Management (NEB - CS / HM / Business)</option>
+                            <option value="BSc (Hons) Computer Systems Engineering (IT)">BSc (Hons) Computer Systems Engineering (IT)</option>
+                            <option value="BA (Hons) Business and Management (BBA)">BA (Hons) Business and Management (BBA)</option>
+                            <option value="BSc (Hons) International Tourism & Hospitality (BHM)">BSc (Hons) International Tourism & Hospitality (BHM)</option>
+                            <option value="BSc (Hons) Cyber Security & Digital Forensics">BSc (Hons) Cyber Security & Digital Forensics</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Your Message / Scholarship Query</label>
+                        <textarea id="inq-message" rows="3" placeholder="Ask about fee structure, merit scholarships, or entrance dates..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-ismt-blue focus:ring-2 focus:ring-ismt-blue/20 outline-none text-sm transition"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-ismt-navy to-ismt-blue hover:from-ismt-blue hover:to-ismt-navy text-white font-bold text-sm sm:text-base shadow-lg transition-all flex items-center justify-center gap-2">
+                        <span>Submit Admission Inquiry</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+
+                <!-- Inline Form Confirmation Box -->
+                <div id="form-success-msg" class="hidden mt-6 p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900">
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-emerald-600 text-xl mt-0.5"></i>
+                        <div>
+                            <h4 class="font-bold text-sm">Application Inquiry Received!</h4>
+                            <p id="form-success-text" class="text-xs text-emerald-800 mt-1"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 9. FOOTER ==================== -->
+    <footer class="bg-ismt-navy text-slate-300 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Col 1: Brand -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500 text-ismt-navy font-heading font-extrabold flex items-center justify-center text-lg">
+                            ISMT
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-bold text-white text-lg leading-none">ISMT College HSS</h3>
+                            <span class="text-xs text-amber-400">Thapathali, Kathmandu</span>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                        Delivering globally recognized UK qualifications and +2 Higher Secondary education in Nepal since 2011.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="#contact" aria-label="Facebook" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-amber-500 hover:text-ismt-navy flex items-center justify-center transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#contact" aria-label="Instagram" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-amber-500 hover:text-ismt-navy flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#contact" aria-label="LinkedIn" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-amber-500 hover:text-ismt-navy flex items-center justify-center transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#contact" aria-label="YouTube" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-amber-500 hover:text-ismt-navy flex items-center justify-center transition"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="font-heading font-bold text-white text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-400">
+                        <li><a href="#about" class="hover:text-amber-400 transition">About ISMT College HSS</a></li>
+                        <li><a href="#programs" class="hover:text-amber-400 transition">Academic Programs</a></li>
+                        <li><a href="#facilities" class="hover:text-amber-400 transition">Labs & Infrastructure</a></li>
+                        <li><a href="#gallery" class="hover:text-amber-400 transition">Student Life & Alumni</a></li>
+                        <li><button onclick="openApplyModal('Scholarship Assessment')" class="hover:text-amber-400 transition">Merit Scholarships</button></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Programs -->
+                <div>
+                    <h4 class="font-heading font-bold text-white text-base mb-4">Featured Courses</h4>
+                    <ul class="space-y-2.5 text-sm text-slate-400">
+                        <li><a href="#programs" class="hover:text-amber-400 transition">+2 Science (NEB)</a></li>
+                        <li><a href="#programs" class="hover:text-amber-400 transition">+2 Management (NEB)</a></li>
+                        <li><a href="#programs" class="hover:text-amber-400 transition">BSc (Hons) IT</a></li>
+                        <li><a href="#programs" class="hover:text-amber-400 transition">BA (Hons) Business (BBA)</a></li>
+                        <li><a href="#programs" class="hover:text-amber-400 transition">BSc (Hons) Hospitality (BHM)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div>
+                    <h4 class="font-heading font-bold text-white text-base mb-4">Admissions Newsletter</h4>
+                    <p class="text-xs sm:text-sm text-slate-400 mb-4">Subscribe for entrance exam notices, scholarship deadlines, and campus events.</p>
+                    <form id="newsletter-form" class="flex gap-2">
+                        <input type="email" required placeholder="Your email" class="w-full px-3.5 py-2.5 rounded-xl bg-white/10 border border-white/15 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-amber-400">
+                        <button type="submit" class="px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-ismt-navy font-bold text-sm transition shrink-0">
+                            Join
+                        </button>
+                    </form>
+                    <p id="newsletter-feedback" class="text-xs text-emerald-400 mt-2 hidden">Subscribed! Thank you for joining ISMT updates.</p>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+                <p>&copy; <span id="year"></span> ISMT College HSS, Thapathali, Kathmandu. All Rights Reserved.</p>
+                <p>Affiliated to NEB Nepal | Partnered with University of Sunderland & Pearson UK</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== INTERACTIVE MODALS ==================== -->
+
+    <!-- 1. Program Details Modal -->
+    <div id="program-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/75 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 animate-fadeIn">
+            <div class="p-6 sm:p-8">
+                <div class="flex justify-between items-start gap-4 pb-4 border-b border-slate-100">
+                    <div>
+                        <span id="modal-badge" class="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-50 text-ismt-blue mb-2">Affiliation</span>
+                        <h3 id="modal-title" class="font-heading font-extrabold text-2xl text-ismt-navy">Program Title</h3>
+                    </div>
+                    <button onclick="closeProgramModal()" class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <div class="py-5 space-y-5 text-sm text-slate-600">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                        <div>
+                            <span class="text-xs text-slate-400 block">Duration</span>
+                            <strong id="modal-duration" class="text-slate-900">3 Years</strong>
+                        </div>
+                        <div>
+                            <span class="text-xs text-slate-400 block">Awarding Body</span>
+                            <strong id="modal-award" class="text-slate-900">University of Sunderland</strong>
+                        </div>
+                        <div class="col-span-2 sm:col-span-1">
+                            <span class="text-xs text-slate-400 block">Intake</span>
+                            <strong class="text-ismt-crimson">Open Now (2026)</strong>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-slate-900 mb-1.5">Program Overview</h4>
+                        <p id="modal-desc" class="leading-relaxed"></p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-slate-900 mb-2">Key Modules & Highlights</h4>
+                        <ul id="modal-modules" class="grid sm:grid-cols-2 gap-2"></ul>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200/80">
+                        <h4 class="font-bold text-amber-900 text-xs uppercase tracking-wider mb-1">Entry Eligibility</h4>
+                        <p id="modal-eligibility" class="text-xs text-amber-900"></p>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row gap-3 justify-end">
+                    <button onclick="closeProgramModal()" class="px-5 py-2.5 rounded-xl border border-slate-200 text-slate-700 font-semibold text-sm hover:bg-slate-50">
+                        Close
+                    </button>
+                    <button id="modal-apply-btn" class="px-6 py-2.5 rounded-xl bg-ismt-crimson hover:bg-rose-700 text-white font-semibold text-sm shadow-md flex items-center justify-center gap-2">
+                        <span>Apply for This Program</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Quick Apply Modal -->
+    <div id="apply-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/75 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200">
+            <div class="flex justify-between items-center pb-4 border-b border-slate-100">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-ismt-crimson">ISMT Thapathali Admissions</span>
+                    <h3 class="font-heading font-extrabold text-xl text-ismt-navy">Quick Online Application</h3>
+                </div>
+                <button onclick="closeApplyModal()" class="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="quick-apply-form" class="space-y-4 mt-5">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Applicant Full Name *</label>
+                    <input type="text" id="qa-name" required placeholder="Enter your full name" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:border-ismt-blue outline-none">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Phone Number *</label>
+                        <input type="tel" id="qa-phone" required placeholder="98XXXXXXXX" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:border-ismt-blue outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Email *</label>
+                        <input type="email" id="qa-email" required placeholder="name@email.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:border-ismt-blue outline-none">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Selected Program *</label>
+                    <input type="text" id="qa-program" required class="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm font-medium text-ismt-navy">
+                </div>
+                <button type="submit" class="w-full py-3.5 rounded-xl bg-ismt-crimson hover:bg-rose-700 text-white font-bold text-sm shadow-lg transition">
+                    Confirm & Request Callback
+                </button>
+            </form>
+            <div id="qa-success" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 text-emerald-800 text-xs font-medium border border-emerald-200"></div>
+        </div>
+    </div>
+
+    <!-- 3. Gallery Lightbox Modal -->
+    <div id="lightbox-modal" onclick="closeLightbox()" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/90 backdrop-blur-md">
+        <div class="max-w-4xl w-full relative" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white hover:text-amber-400 text-sm font-semibold flex items-center gap-2">
+                <span>Close Preview</span>
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <img id="lightbox-img" src="" alt="Gallery Preview" class="w-full max-h-[75vh] object-contain rounded-2xl shadow-2xl">
+            <p id="lightbox-caption" class="text-center text-white text-sm font-medium mt-4"></p>
+        </div>
+    </div>
+
+    <!-- Floating Notification Toast (Replaces any browser alert) -->
+    <div id="toast-notification" class="fixed bottom-5 right-5 z-50 hidden max-w-sm bg-ismt-navy text-white px-5 py-4 rounded-2xl shadow-2xl border border-white/15 flex items-center gap-3">
+        <i class="fa-solid fa-circle-info text-amber-400 text-lg"></i>
+        <p id="toast-text" class="text-xs sm:text-sm"></p>
+    </div>
+
+    <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+    <script>
+        // Academic Programs Data Repository
+        const programsData = [
+            {
+                id: 'plus2-science',
+                category: 'plus2',
+                badge: 'NEB +2 Stream',
+                badgeColor: 'bg-emerald-100 text-emerald-800',
+                title: '+2 Science (NEB)',
+                duration: '2 Years (Grade XI & XII)',
+                award: 'National Examinations Board (NEB)',
+                icon: 'fa-atom',
+                summary: 'Rigorous foundation in Physics, Chemistry, Biology, and Mathematics with specialized pre-medical and pre-engineering preparation at Thapathali.',
+                modules: ['Physics & Applied Mechanics', 'Organic & Physical Chemistry', 'Botany & Zoology / Computer', 'Higher Mathematics', 'Practical Lab Assessments', 'IOE & CEE Entrance Prep'],
+                eligibility: 'SEE passed with minimum GPA 2.8 and strong grades in Science & Compulsory/Optional Mathematics.'
+            },
+            {
+                id: 'plus2-mgmt',
+                category: 'plus2',
+                badge: 'NEB +2 Stream',
+                badgeColor: 'bg-amber-100 text-amber-800',
+                title: '+2 Management (CS / HM / Business)',
+                duration: '2 Years (Grade XI & XII)',
+                award: 'National Examinations Board (NEB)',
+                icon: 'fa-chart-line',
+                summary: 'Dynamic management program offering specialization tracks in Computer Science, Hotel Management, and Business Studies with practical exposure.',
+                modules: ['Accountancy & Finance', 'Economics & Business Studies', 'Computer Science / Programming', 'Hotel Management Practical', 'Business Communication', 'Leadership Workshops'],
+                eligibility: 'SEE passed with minimum GPA 2.0 from a recognized board.'
+            },
+            {
+                id: 'bsc-it',
+                category: 'bachelor',
+                badge: 'UK Bachelor\'s (Hons)',
+                badgeColor: 'bg-blue-100 text-ismt-blue',
+                title: 'BSc (Hons) Computer Systems Engineering (IT)',
+                duration: '3 Years (6 Semesters)',
+                award: 'University of Sunderland, UK',
+                icon: 'fa-laptop-code',
+                summary: 'Industry-aligned British IT degree focusing on full-stack software development, cloud computing, artificial intelligence, and enterprise systems.',
+                modules: ['Software Engineering & Agile', 'Web & Mobile App Development', 'Database Systems & Cloud', 'Artificial Intelligence & Data', 'Network Architecture', 'Final Year Capstone Project'],
+                eligibility: '+2 / A-Levels or equivalent with minimum 50% aggregate or 2.2 GPA.'
+            },
+            {
+                id: 'ba-bba',
+                category: 'bachelor',
+                badge: 'UK Bachelor\'s (Hons)',
+                badgeColor: 'bg-rose-100 text-ismt-crimson',
+                title: 'BA (Hons) Business and Management (BBA)',
+                duration: '3 Years (6 Semesters)',
+                award: 'University of Sunderland, UK',
+                icon: 'fa-briefcase',
+                summary: 'Develop strategic leadership, global marketing, financial analytics, and entrepreneurial skills tailored for modern corporate ventures.',
+                modules: ['Strategic Management', 'Digital Marketing & Branding', 'Corporate Finance & Accounting', 'International Business Strategy', 'Human Resource Leadership', 'Entrepreneurship & Innovation'],
+                eligibility: '+2 / A-Levels or equivalent in any discipline with minimum 2.2 GPA.'
+            },
+            {
+                id: 'bsc-bhm',
+                category: 'bachelor',
+                badge: 'UK Bachelor\'s (Hons)',
+                badgeColor: 'bg-purple-100 text-purple-800',
+                title: 'BSc (Hons) International Tourism & Hospitality',
+                duration: '3 Years (6 Semesters)',
+                award: 'University of Sunderland, UK',
+                icon: 'fa-hotel',
+                summary: 'Combines executive hospitality management theory with hands-on culinary, food & beverage, and international hotel internships.',
+                modules: ['International Hospitality Operations', 'Culinary Arts & F&B Management', 'Sustainable Tourism Planning', 'Event & Resort Management', 'Hospitality Finance', 'Global Paid Internship'],
+                eligibility: '+2 / A-Levels or equivalent in any stream with minimum 2.2 GPA.'
+            },
+            {
+                id: 'bsc-cyber',
+                category: 'bachelor',
+                badge: 'UK Bachelor\'s (Hons)',
+                badgeColor: 'bg-cyan-100 text-cyan-800',
+                title: 'BSc (Hons) Cyber Security & Digital Forensics',
+                duration: '3 Years (6 Semesters)',
+                award: 'University of Sunderland, UK',
+                icon: 'fa-shield-halved',
+                summary: 'Specialized UK computing degree training next-generation ethical hackers, SOC analysts, and digital forensic investigators.',
+                modules: ['Ethical Hacking & Pen-Testing', 'Digital Forensics Investigation', 'Cryptography & Network Security', 'Incident Response & Governance', 'Secure Software Architecture', 'Cyber Threat Intelligence'],
+                eligibility: '+2 / A-Levels or equivalent with minimum 2.2 GPA.'
+            }
+        ];
+
+        // Render Program Cards
+        function renderPrograms(filter = 'all') {
+            const grid = document.getElementById('programs-grid');
+            grid.innerHTML = '';
+
+            const filtered = filter === 'all' 
+                ? programsData 
+                : programsData.filter(p => p.category === filter);
+
+            filtered.forEach(prog => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group';
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold ${prog.badgeColor}">${prog.badge}</span>
+                            <div class="w-10 h-10 rounded-xl bg-slate-100 group-hover:bg-ismt-navy group-hover:text-amber-400 text-ismt-navy flex items-center justify-center transition-colors">
+                                <i class="fa-solid ${prog.icon}"></i>
+                            </div>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-ismt-navy group-hover:text-ismt-crimson transition-colors mb-2">${prog.title}</h3>
+                        <p class="text-xs font-semibold text-slate-500 mb-3 flex items-center gap-2">
+                            <i class="fa-regular fa-clock text-amber-600"></i> ${prog.duration}
+                        </p>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-5">${prog.summary}</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+                        <button onclick="openProgramModal('${prog.id}')" class="text-sm font-bold text-ismt-blue hover:text-ismt-crimson transition flex items-center gap-1.5">
+                            <span>Curriculum & Details</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                        <button onclick="openApplyModal('${prog.title.replace(/'/g, "\\'")}')" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-ismt-crimson text-white text-xs font-semibold transition">
+                            Apply
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter Tab Click Handlers
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('active', 'bg-ismt-navy', 'text-white', 'shadow-md');
+                    b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+                });
+                btn.classList.add('active', 'bg-ismt-navy', 'text-white', 'shadow-md');
+                btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+                renderPrograms(btn.dataset.filter);
+            });
+        });
+
+        // Program Details Modal Controls
+        function openProgramModal(id) {
+            const prog = programsData.find(p => p.id === id);
+            if (!prog) return;
+
+            document.getElementById('modal-badge').textContent = prog.badge;
+            document.getElementById('modal-title').textContent = prog.title;
+            document.getElementById('modal-duration').textContent = prog.duration;
+            document.getElementById('modal-award').textContent = prog.award;
+            document.getElementById('modal-desc').textContent = prog.summary;
+            document.getElementById('modal-eligibility').textContent = prog.eligibility;
+
+            const modulesList = document.getElementById('modal-modules');
+            modulesList.innerHTML = prog.modules.map(m => `
+                <li class="flex items-center gap-2 text-xs text-slate-700 bg-slate-50 px-3 py-2 rounded-xl border border-slate-100">
+                    <i class="fa-solid fa-check text-emerald-600"></i>
+                    <span>${m}</span>
+                </li>
+            `).join('');
+
+            document.getElementById('modal-apply-btn').onclick = () => {
+                closeProgramModal();
+                openApplyModal(prog.title);
+            };
+
+            const modal = document.getElementById('program-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeProgramModal() {
+            const modal = document.getElementById('program-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Quick Apply Modal Controls
+        function openApplyModal(programName) {
+            document.getElementById('qa-program').value = programName;
+            document.getElementById('qa-success').classList.add('hidden');
+            document.getElementById('quick-apply-form').reset();
+            document.getElementById('qa-program').value = programName;
+
+            const modal = document.getElementById('apply-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeApplyModal() {
+            const modal = document.getElementById('apply-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Lightbox Controls
+        function openLightbox(src, caption) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').textContent = caption;
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Toast Notification Helper
+        function showToast(message) {
+            const toast = document.getElementById('toast-notification');
+            document.getElementById('toast-text').textContent = message;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4000);
+        }
+
+        function openPortalToast() {
+            showToast('ISMT Student VLE & Portal: Please use your institutional @ismt.edu.np credentials to sign in.');
+        }
+
+        // Form Submissions
+        document.getElementById('inquiry-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('inq-name').value.trim();
+            const program = document.getElementById('inq-program').value;
+            const successBox = document.getElementById('form-success-msg');
+            const successText = document.getElementById('form-success-text');
+
+            successText.textContent = `Thank you, ${name}! Your inquiry for "${program}" has been registered with ISMT College HSS, Thapathali. Our admissions team will call you shortly.`;
+            successBox.classList.remove('hidden');
+            this.reset();
+        });
+
+        document.getElementById('quick-apply-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('qa-name').value.trim();
+            const prog = document.getElementById('qa-program').value;
+            const box = document.getElementById('qa-success');
+            box.textContent = `Thank you ${name}! Your application request for ${prog} is confirmed. An ISMT counselor will contact you today.`;
+            box.classList.remove('hidden');
+            setTimeout(() => closeApplyModal(), 2500);
+        });
+
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('newsletter-feedback').classList.remove('hidden');
+            this.reset();
+        });
+
+        // Mobile Hamburger Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Animated Counters on Scroll
+        let countersStarted = false;
+        function animateCounters() {
+            if (countersStarted) return;
+            const statsSection = document.getElementById('stats-section');
+            const rect = statsSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 50) {
+                countersStarted = true;
+                document.querySelectorAll('.counter').forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    const duration = 1600;
+                    const stepTime = 20;
+                    const steps = duration / stepTime;
+                    const increment = target / steps;
+                    let current = 0;
+
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            counter.textContent = target.toLocaleString();
+                            clearInterval(timer);
+                        } else {
+                            counter.textContent = Math.floor(current).toLocaleString();
+                        }
+                    }, stepTime);
+                });
+            }
+        }
+
+        window.addEventListener('scroll', animateCounters);
+
+        // Initialize Page
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+            renderPrograms('all');
+            animateCounters();
+        });
+    </script>
+</body>
+</html>
+
